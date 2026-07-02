@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sanjana ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+overflow:hidden;
+}
+
+.container{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:20px;
+text-align:center;
+color:#fff;
+width:90%;
+max-width:400px;
+box-shadow:0 0 20px rgba(0,0,0,.2);
+z-index:2;
+}
+
+h1{
+font-size:32px;
+margin-bottom:10px;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px #fff;}
+to{text-shadow:0 0 25px #ff004c;}
+}
+
+button{
+padding:12px 25px;
+margin:10px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+#yes{
+background:#ff0055;
+color:white;
+animation:heartbeat 1s infinite;
+}
+
+@keyframes heartbeat{
+0%{transform:scale(1);}
+50%{transform:scale(1.15);}
+100%{transform:scale(1);}
+}
+
+#no{
+background:white;
+color:#ff0055;
+position:absolute;
+}
+
+#message{
+display:none;
+margin-top:20px;
+font-size:18px;
+line-height:1.6;
+}
+
+.heart{
+position:absolute;
+color:#ff0055;
+font-size:25px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Dear Sanjana ❤️</h1>
+
+<h2>Will You Be My Girlfriend? 🌹</h2>
+
+<button id="yes">Yes ❤️</button>
+<button id="no">No 💔</button>
+
+<div id="message">
+❤️ Shayad main apni feelings face to face kabhi na bata paun, isliye ye page banaya.<br><br>
+
+Tum meri life me bahut special ho.<br>
+
+I really like you. ❤️<br><br>
+
+<h3>Forever Yours,<br>Mani 🌹</h3>
+</div>
+</div>
+
+<script>
+
+const no=document.getElementById("no");
+
+no.addEventListener("mouseover",()=>{
+no.style.left=Math.random()*80+"%";
+no.style.top=Math.random()*80+"%";
+});
+
+document.getElementById("yes").onclick=()=>{
+document.getElementById("message").style.display="block";
+alert("Thank You Sanjana ❤️");
+}
+
+function hearts(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(3+Math.random()*3)+"s";
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+}
+
+setInterval(hearts,250);
+
+</script>
+
+</body>
+</html>
